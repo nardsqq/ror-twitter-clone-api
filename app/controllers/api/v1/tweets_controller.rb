@@ -32,4 +32,21 @@ class Api::V1::TweetsController < ApplicationController
 			render json: { :errors => @tweet.errors.full_messages.as_json }, status: 400
 		end
 	end
+
+	# Remove the specified tweet resource from the database
+	def destroy
+		@tweet = Tweet.find(params[:id])
+
+		if @tweet.destroy
+			head(204)
+		else
+			head(422)
+		end
+	end
+
+	private
+
+	def tweet_params
+		params.permit(:tweet)
+	end
 end
