@@ -21,4 +21,15 @@ class Api::V1::TweetsController < ApplicationController
 
 		render json: @tweet, status: 200
 	end
+
+	# Find a specified tweet then update with the given attributes
+	def update
+		@tweet = Tweet.find(params[:id])
+
+		if @tweet.update_attributes(tweet_params)
+			render json: @tweet, status: 200
+		else
+			render json: { :errors => @tweet.errors.full_messages.as_json }, status: 400
+		end
+	end
 end
