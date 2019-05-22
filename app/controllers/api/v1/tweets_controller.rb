@@ -14,4 +14,11 @@ class Api::V1::TweetsController < ApplicationController
 
 		render json: @tweet, status: 201
 	end
+
+	# Show details of a specified tweet from the database
+	def show
+		@tweet = Tweet.find(params[:id])
+
+		render json: @tweet, status: 200
+	end
 end
