@@ -50,4 +50,8 @@ group :development do
   gem "pry-rails"
 end
 
+# Devise gem for API authentication
 gem "devise"
+
+# Rack CORS Gem to setup CORS
+gem 'rack-cors'
