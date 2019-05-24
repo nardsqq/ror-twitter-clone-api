@@ -9,7 +9,7 @@ class Api::V1::TweetsController < ApplicationController
 	# Create a tweet resource
 	def create
 		@tweet = Tweet.new(tweet_params)
-
+		
 		@tweet.save
 
 		render json: @tweet, status: 201
@@ -25,7 +25,7 @@ class Api::V1::TweetsController < ApplicationController
 	# Find a specified tweet then update with the given attributes
 	def update
 		@tweet = Tweet.find(params[:id])
-
+		
 		if @tweet.update_attributes(tweet_params)
 			render json: @tweet, status: 200
 		else
@@ -36,7 +36,7 @@ class Api::V1::TweetsController < ApplicationController
 	# Remove the specified tweet resource from the database
 	def destroy
 		@tweet = Tweet.find(params[:id])
-
+		
 		if @tweet.destroy
 			head(204)
 		else
