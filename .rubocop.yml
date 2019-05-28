@@ -1,0 +1,68 @@
+require:
+  - rubocop-rspec
+  - rubocop-performance
+
+Rails:
+  Enabled: true
+
+# Style
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/PreferredHashMethods:
+  EnforcedStyle: verbose
+
+# Layout
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+
+Layout/IndentationConsistency:
+  EnforcedStyle: rails
+
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+Layout/BlockAlignment:
+  Enabled: false
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: start_of_line
+
+# RSpec
+RSpec/InstanceVariable:
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+
+Metrics/BlockLength:
+  Max: 250
+  Exclude:
+    - 'config/routes.rb'
+
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+    - 'db/seeds.rb'
+    - 'bin/*'
+  TargetRubyVersion: 2.6.0
