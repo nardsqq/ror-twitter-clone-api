@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  # devise_for :users
+
   # Define root URL for the application
   root "pages#index"
 
@@ -6,8 +9,6 @@ Rails.application.routes.draw do
   get "home" => "pages#home"
   get "profile" => "pages#profile"
 
-  devise_for :users
-  # devise_for :users
   namespace :api do
     namespace :v1 do
       resources :tweets
