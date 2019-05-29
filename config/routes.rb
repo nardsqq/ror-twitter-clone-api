@@ -5,10 +5,6 @@ Rails.application.routes.draw do
   # Define root URL for the application
   root "pages#index"
 
-  # Pages routes
-  get "/home", to: "pages#home"
-  get "/profile", to: "pages#profile"
-
   namespace :api do
     namespace :v1 do
       resources :tweets
