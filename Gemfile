@@ -71,3 +71,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Use Devise for basic authentication
 gem 'devise'
+
+# Add hamlit to convert .erb files into .haml format
+gem 'hamlit-rails'
