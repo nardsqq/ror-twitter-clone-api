@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   root "pages#index"
 
   # Pages routes
-  get "home" => "pages#home"
-  get "profile" => "pages#profile"
+  get "/home", to: "pages#home"
+  get "/profile", to: "pages#profile"
 
   namespace :api do
     namespace :v1 do
