@@ -8,13 +8,13 @@ class ApplicationController < ActionController::Base
   # Allow selected fields to be updated during mass assignment
   protected
 
-    def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: %i[username
-                                                           email password
-                                                           password_confirmation
-                                                           remember_me])
-      devise_parameter_sanitizer.permit(:sign_in, keys: %i[username
-                                                           email password
-                                                           password_confirmation])
-    end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[username
+                                                         email password
+                                                         password_confirmation
+                                                         remember_me])
+    devise_parameter_sanitizer.permit(:sign_in, keys: %i[username
+                                                         email password
+                                                         password_confirmation])
+  end
 end
