@@ -2,11 +2,11 @@
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
     = f.label :username
-    %br/
+    %br
     = f.text_field :username, autofocus: true
   .field
     = f.label :password
-    %br/
+    %br
     = f.password_field :password, autocomplete: "current-password"
   - if devise_mapping.rememberable?
     .field
