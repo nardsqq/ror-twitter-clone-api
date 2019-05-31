@@ -74,3 +74,6 @@ gem 'devise'
 
 # Add hamlit to convert .erb files into .haml format
 gem 'hamlit-rails'
+
+# Transpile and preprocess front-end assets with webpacker
+gem 'webpacker', '~> 4.x'
