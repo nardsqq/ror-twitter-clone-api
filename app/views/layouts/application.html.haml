@@ -7,14 +7,5 @@
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    -# = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    -# = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    .alert.alert-primary(role="alert") A simple primary alert check it out!
-
-    .card
-      %img.card-img-top(src="" alt="")/
-      .card-body
-        %h5.card-title Card Title
-        %p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum illo officia magni porro, architecto soluta sequi, nam commodi rem assumenda sapiente, officiis rerum repellat unde numquam dolorem? Aliquam, veritatis accusantium!
-        %a.btn.btn-primary(href="") Go somewhere
+    = yield
