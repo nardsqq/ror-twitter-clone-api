@@ -1,0 +1,12 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  %a.navbar-brand(href="#") Journey
+  %button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
+    %span.navbar-toggler-icon
+  .collapse.navbar-collapse#navbarNavDropdown
+    %ul.navbar-nav.ml-auto
+      %li.nav-item.dropdown
+        %a.nav-link.dropdown-toggle#navbarDropdownMenuLink(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+        .dropdown-menu
+          %a.dropdown-item(href="#") Profile
+          %a.dropdown-item(href="#") Settings
+          = link_to('Sign Out', destroy_user_session_path, method: :delete, class: "dropdown-item")
