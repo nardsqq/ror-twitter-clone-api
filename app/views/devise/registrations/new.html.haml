@@ -1,36 +1,37 @@
-.card.m-5
-  .card-header
-    %h5 Sign up to Journey
-  .card-body
-    .container
+.container
+  .card.m-5
+    .card-header
+      %h5 Sign up to Journey
+    .card-body
+      .container
 
-      %br/
+        %br/
 
-      = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "col-md-8 offset-md-2"}) do |f|
-        = render "devise/shared/error_messages", resource: resource
+        = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "col-md-8 offset-md-2"}) do |f|
+          = render "devise/shared/error_messages", resource: resource
 
-        .form-group
-          = f.label :username
-          = f.text_field :username, autofocus: true, class: "form-control"
-          %small#usernameHelpBlock.form-text.text-muted Your username must be 8-20 characters long, may contain letters and numbers, and must not contain spaces, special characters, or emoji.
+          .form-group
+            = f.label :username
+            = f.text_field :username, autofocus: true, class: "form-control"
+            %small#usernameHelpBlock.form-text.text-muted Your username must be 8-20 characters long, may contain letters and numbers, and must not contain spaces, special characters, or emoji.
 
-        .form-group
-          = f.label :email
-          = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"
-          %small#emailHelpBlock.form-text.text-muted Please use your personal email for privacy and security.
+          .form-group
+            = f.label :email
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"
+            %small#emailHelpBlock.form-text.text-muted Please use your personal email for privacy and security.
 
-        .form-group
-          = f.label :password
-          = f.password_field :password, autocomplete: "new-password", class: "form-control"
-          %small#usernameHelpBlock.form-text.text-muted Your username must be 6-30 characters long, may contain letters and numbers, and must not contain spaces, special characters, or emoji.
+          .form-group
+            = f.label :password
+            = f.password_field :password, autocomplete: "new-password", class: "form-control"
+            %small#usernameHelpBlock.form-text.text-muted Your username must be 6-30 characters long, may contain letters and numbers, and must not contain spaces, special characters, or emoji.
 
-        .form-group
-          = f.label :password_confirmation
-          %br/
-          = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control"
-          %small#confirmPasswordHelpBlock.form-text.text-muted Your password confirmation must match the previously filled password field.
+          .form-group
+            = f.label :password_confirmation
+            %br/
+            = f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control"
+            %small#confirmPasswordHelpBlock.form-text.text-muted Your password confirmation must match the previously filled password field.
 
-        .form-group.pt-2
-          = f.submit "Sign up", class: "btn btn-primary btn-lg btn-block"
-        
-        = render "devise/shared/links"
+          .form-group.pt-2
+            = f.submit "Sign up", class: "btn btn-primary btn-lg btn-block"
+
+          = render "devise/shared/links"
