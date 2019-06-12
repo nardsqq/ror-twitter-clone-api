@@ -1,29 +1,30 @@
-.pt-5
-  .card.m-5
-    .row.no-gutters
-      .col-md-4
-        %img.card-img(src="https://picsum.photos/200/300")/
-      .col-md-8
-        .card-body
-          .container
-            = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "col-md-12 pt-4"}) do |f|
-              
-              %h2 Sign in to Journey
-              
-              .form-group.pt-5
-                = f.label :username
-                = f.text_field :username, autofocus: true, class: "form-control"
-              
-              .form-group
-                = f.label :password
-                = f.password_field :password, autocomplete: "current-password", class: "form-control"
-              
-              - if devise_mapping.rememberable?
-                .form-check
-                  = f.check_box :remember_me, class: "form-check-input"
-                  = f.label :remember_me, class: "form-check-label"
-              
-              .form-group.pt-3
-                = f.submit "Sign in", class: "btn btn-primary btn-lg btn-block"
-              
-              = render "devise/shared/links"
+.container
+  .pt-5
+    .card.m-5
+      .row.no-gutters
+        .col-md-4
+          = image_tag "https://picsum.photos/200/300", class: "card-img"
+        .col-md-8
+          .card-body
+            .container
+              = form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "col-md-12 pt-4"}) do |f|
+
+                %h2 Sign in to Journey
+
+                .form-group.pt-5
+                  = f.label :username
+                  = f.text_field :username, autofocus: true, class: "form-control"
+
+                .form-group
+                  = f.label :password
+                  = f.password_field :password, autocomplete: "current-password", class: "form-control"
+
+                - if devise_mapping.rememberable?
+                  .form-check
+                    = f.check_box :remember_me, class: "form-check-input"
+                    = f.label :remember_me, class: "form-check-label"
+
+                .form-group.pt-3
+                  = f.submit "Sign in", class: "btn btn-primary btn-lg btn-block"
+
+                = render "devise/shared/links"

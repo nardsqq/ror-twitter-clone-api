@@ -1,0 +1,11 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  = link_to "Journey", "#", class: "navbar-brand"
+  = button_tag "Test", class: "navbar-toggler", type: "button", data: { toggle: "collapse", target: "#navbarNavDropdown" }, aria: { controls: "navbarNavDropdown", expanded: "false", label: "Toggle Navigation" }
+  .collapse.navbar-collapse#navbarNavDropdown
+    %ul.navbar-nav.ml-auto
+      %li.nav-item.dropdown
+        = link_to "", "#", class: "nav-link dropdown-toggle", id: "navbarDropdownMenuLink", role: "button", data: { toggle: "dropdown" }, aria: { haspopup: "true", expanded: "false" }
+        .dropdown-menu
+          = link_to "Profile", "#", class: "dropdown-item"
+          = link_to "Settings", "#", class: "dropdown-item"
+          = link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item"
