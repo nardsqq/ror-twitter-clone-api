@@ -1,1 +1,24 @@
-= render 'layouts/nav'
+= render :partial => 'layouts/nav'
+
+.container.mt-5
+  %button.btn.btn-primary.mb-3(type="button") Share your Journey
+  .card
+    .card-body
+      .media
+        = image_tag "https://picsum.photos/128/128", class: "align-self-start mr-3"
+        .media-body
+          %h5.mt-0 Top-aligned media
+          %p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente quia aut dolor odio voluptatibus error ipsa alias magnam officiis accusantium, deleniti natus asperiores quibusdam ad fuga odit provident tempore sequi.
+  .card-columns.mt-3
+    .card
+      .card-body
+        %h5.card-title Card Title
+        %p.card-text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum cum deserunt soluta temporibus perferendis totam unde ratione non sed, a, delectus autem incidunt vel optio. Pariatur possimus quam quia non.
+    .card
+      .card-body
+        %h5.card-title Card Title
+        %p.card-text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum cum deserunt soluta temporibus perferendis totam unde ratione non sed, a, delectus autem incidunt vel optio. Pariatur possimus quam quia non.
+    .card
+      .card-body
+        %h5.card-title Card Title
+        %p.card-text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum cum deserunt soluta temporibus perferendis totam unde ratione non sed, a, delectus autem incidunt vel optio. Pariatur possimus quam quia non.
