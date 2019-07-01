@@ -1,8 +1,8 @@
-= render :partial => 'layouts/nav'
+= render 'layouts/nav'
 
 .container.mt-5
 
-  %button.btn.btn-primary.mb-3(type="button") Share your Journey
+  = button_tag "Share your Journey", class: "btn btn-primary mb-3", type: "button"
 
   .card
     .card-body
