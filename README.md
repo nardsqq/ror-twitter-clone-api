@@ -19,8 +19,10 @@
 
 ### Database
 
-1. Use `bundle exec rails db:create` to automatically create your databases (both development and testing).
-2. Afterwards, run `bundle exec rails db:migrate` to migrate the database tables.
+1. Create a personal copy of the database configuration file via `cp config/database.yml.sample config/database.yml`
+2. Next, Fill in the settings with your own local configurations
+3. Then, Use `bundle exec rails db:create` to automatically create your databases (both development and testing).
+4. Afterwards, run `bundle exec rails db:migrate` to migrate the database tables.
 
 ### Usage
 
