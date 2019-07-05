@@ -2,6 +2,6 @@ class TweetsController < ApplicationController
   def profile
     @tweets = Tweet.latest
 
-    render("profile")
+    render :profile
   end
 end
