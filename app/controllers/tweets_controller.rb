@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   def profile
-    @tweets = Tweet.order(:created_at)
+    @tweets = Tweet.latest
 
     render("profile")
   end
