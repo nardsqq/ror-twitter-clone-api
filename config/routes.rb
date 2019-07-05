@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # devise_for :users
 
   # Define root URL for the application
-  root "tweets#profile"
+  root "tweets#index"
 
   namespace :api do
     namespace :v1 do

@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
-  def profile
+  def index
     @tweets = Tweet.latest
 
-    render :profile
+    render :index
   end
 end
