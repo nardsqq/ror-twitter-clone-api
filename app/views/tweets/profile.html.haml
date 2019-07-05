@@ -1,0 +1,32 @@
+= render 'layouts/nav'
+
+.container.mt-5
+
+  = button_tag "Share your Journey", class: "btn btn-primary mb-3", type: "button"
+
+  .card
+    .card-body
+      .media
+        = image_tag "https://picsum.photos/130/170", class: "align-self-start mr-3"
+        .media-body
+          %h5.mt-0 Top-aligned media
+          %p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente quia aut dolor odio voluptatibus error ipsa alias magnam officiis accusantium, deleniti natus asperiores quibusdam ad fuga odit provident tempore sequi.
+
+          %small
+            .text-muted Following: 0
+          %small
+            .text-muted Followers: 0
+          %small
+            .text-muted Journeys: 0
+
+  .card-columns.mt-3
+    - @tweets.each do |tweet|
+      .card
+        .card-body
+          %h5.card-title
+            .badge.badge-primary
+              = "@" + tweet.user.username
+          %p.card-text
+            = tweet.text
+          %small.text-muted
+            = tweet.created_at
