@@ -1,0 +1,9 @@
+.card
+  .card-body
+    %h5.card-title
+      .badge.badge-primary
+        = "@" + tweet.username
+    %p.card-text
+      = tweet.text
+    %small.text-muted
+      = tweet.created_at

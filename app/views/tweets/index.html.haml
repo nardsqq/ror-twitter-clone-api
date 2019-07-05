@@ -20,13 +20,4 @@
             .text-muted Journeys: 0
 
   .card-columns.mt-3
-    - @tweets.each do |tweet|
-      .card
-        .card-body
-          %h5.card-title
-            .badge.badge-primary
-              = "@" + tweet.user.username
-          %p.card-text
-            = tweet.text
-          %small.text-muted
-            = tweet.created_at
+    = render @tweets
