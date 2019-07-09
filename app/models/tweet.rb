@@ -4,5 +4,5 @@ class Tweet < ApplicationRecord
 
   validates :text, presence: true, length: { maximum: 140 }
 
-  scope :latest, -> { order(:created_at) }
+  scope :latest, -> { order(created_at: :desc) }
 end
