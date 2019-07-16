@@ -1,7 +1,11 @@
 class TweetsController < ApplicationController
   def index
-    @tweets = Tweet.latest
+    if current_user
+      @tweets = current_user.tweets
 
-    render :index
+      render :index
+    else
+      redirect_to new_user_session_path
+    end
   end
 end
